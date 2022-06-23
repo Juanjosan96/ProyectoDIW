@@ -8,13 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/ionicons.min.css">
   <link rel="stylesheet" href="dist/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script> 
 <header>
@@ -29,18 +27,6 @@
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-        </div>
-        <div class="navbar-nav ms-auto">
-          <a href="#" class="nav-item nav-link active">Home</a>
-          <a href="#" class="nav-item nav-link">Profile</a>
-          <a href="#" class="nav-item nav-link">Messages</a>
-          <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>
-          <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#modalLoginForm">Login</a>
-        </div>
-      </div> -->
-
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -62,32 +48,27 @@
 </header>
 
 <!-- Modal -->
-
-
-<div class="modal fade needs-validation" novalidate id="modalLoginForm" tabindex="-1" role="dialog"
-  aria-labelledby="myModalLabel" aria-hidden="true">
-
-
+<div class="modal fade needs-validation" novalidate id="modalLoginForm">
   <form class="needs-validation m-5" novalidate>
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <h4 class="modal-title w-100 font-weight-bold">Identifícate</h4>
+          <button type="button" class="close" data-dismiss="modal" >
+            <span>&times;</span>
           </button>
         </div>
         <div class="modal-body mx-3">
           <div class="md-form mb-5">
             <i class="fas fa-envelope prefix grey-text"></i>
             <input type="email" id="defaultForm-email" class="form-control validate" required>
-            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+            <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
           </div>
 
           <div class="md-form mb-4">
             <i class="fas fa-lock prefix grey-text"></i>
             <input type="password" id="defaultForm-pass" class="form-control validate" required>
-            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+            <label data-error="wrong" data-success="right" for="defaultForm-pass">Contraseña</label>
           </div>
 
         </div>
@@ -98,29 +79,6 @@
     </div>
   </form>
 </div>
-
-<script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function () {
-    'use strict';
-    window.addEventListener('load', function () {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function (form) {
-        form.addEventListener('submit', function (event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
-</script>
-
-
 <body>
   <div class="content">
     <form class="needs-validation m-5" novalidate>
@@ -128,46 +86,42 @@
         <div class="row align-items-stretch justify-content-center no-gutters">
           <div class="col-md-7">
             <div class="form h-100 contact-wrap p-5">
-              <h3 class="text-center">Let's Talk</h3>
+              <h3 class="text-center">Contacto</h3>
               <form class="mb-5" method="post" id="contactForm" name="contactForm">
                 <div class="row">
                   <div class="col-md-6 form-group mb-3">
-                    <label for="" class="col-form-label">Name *</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
+                    <label for="" class="col-form-label">Nombre</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" required>
                   </div>
                   <div class="col-md-6 form-group mb-3">
-                    <label for="" class="col-form-label">Email *</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your email" required>
+                    <label for="" class="col-form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-12 form-group mb-3">
-                    <label for="budget" class="col-form-label">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Your subject" required>
+                    <label for="budget" class="col-form-label">Tema</label>
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Tema" required>
                   </div>
                 </div>
 
                 <div class="row mb-5">
                   <div class="col-md-12 form-group mb-3">
-                    <label for="message" class="col-form-label">Message *</label>
+                    <label for="message" class="col-form-label">Mensaje</label>
                     <textarea class="form-control" name="message" id="message" cols="30" rows="4"
-                      placeholder="Write your message" required></textarea>
+                      placeholder="Escribe aqui tu mensaje" required></textarea>
                   </div>
                 </div>
                 <div class="row justify-content-center">
                   <div class="col-md-5 form-group text-center">
-                    <input type="submit" value="Send Message" class="btn btn-block btn-primary rounded-0 py-2 px-4">
+                    <input type="submit" value="Enviar mensaje" class="btn btn-block btn-primary rounded-2 py-2 px-4">
                     <span class="submitting"></span>
                   </div>
                 </div>
               </form>
 
               <div id="form-message-warning mt-4"></div>
-              <div id="form-message-success">
-                Your message was sent, thank you!
-              </div>
-
             </div>
           </div>
         </div>
@@ -177,13 +131,9 @@
   <!-- FOOTER -->
 
   <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
-    <!-- Grid container -->
     <div class="container p-4 pb-0">
-      <!-- Section: Links -->
       <section class="">
-        <!--Grid row-->
         <div class="row">
-          <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
               CinePlus
@@ -192,15 +142,7 @@
               Toda la cartelera más actualizada con buenos descuentos, ubicada en la zona de Sevilla.
             </p>
           </div>
-          <!-- Grid column -->
-
           <hr class="w-100 clearfix d-md-none" />
-
-
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
               Enlaces de interés
@@ -218,11 +160,7 @@
               <a class="text-white">Contacto</a>
             </p>
           </div>
-
-          <!-- Grid column -->
           <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
             <p><i class="fas fa-home mr-3"></i> España, SVQ 123, ES</p>
@@ -230,277 +168,25 @@
             <p><i class="fas fa-phone mr-3"></i> +0123456789</p>
             <p><i class="fas fa-print mr-3"></i> +9876543210</p>
           </div>
-          <!-- Grid column -->
         </div>
-        <!--Grid row-->
       </section>
-      <!-- Section: Links -->
-
       <hr class="my-3">
-
-      <!-- Section: Copyright -->
       <section class="p-3 pt-0">
         <div class="row d-flex align-items-center">
-          <!-- Grid column -->
           <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
             <div class="p-3">
               &copy; 2022 Copyright
-              <!-- <a class="text-white" href="">CinePlus.com</a> -->
             </div>
-            <!-- Copyright -->
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-            <!-- Facebook -->
-            <a><img src="img/facebook.svg" class="img-fluid m-2"></a>
-
-            <!-- Twitter -->
+          <div class="iconos-footer col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <a class="iconos-footer"><img src="img/facebook.svg" class="img-fluid m-2"></a>
             <a><img src="img/twitter.svg" class="img-fluid m-2"></a>
-
-            <!-- Whatsapp -->
             <a><img src="img/whatsapp.svg" class="img-fluid m-2"></a>
-
-            <!-- Instagram -->
             <a><img src="img/instagram.svg" class="img-fluid m-2"></a>
           </div>
-          <!-- Grid column -->
         </div>
       </section>
-      <!-- Section: Copyright -->
     </div>
-    <!-- Grid container -->
   </footer>
-  <!-- Footer -->
 </body>
-
-<style>
-  body {
-    font-family: "Roboto", sans-serif;
-    background-color: #efefef;
-    line-height: 1.9;
-    color: #8c8c8c;
-    position: relative;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    font-family: "Roboto", sans-serif;
-    color: #000;
-  }
-
-  a {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-  }
-
-  a,
-  a:hover {
-    text-decoration: none !important;
-  }
-
-  .text-black {
-    color: #000;
-  }
-
-  .content {
-    padding: 7rem 0;
-  }
-
-  .heading {
-    font-size: 2.5rem;
-    font-weight: 900;
-  }
-
-  .form-control {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 0;
-    background: none;
-  }
-
-  .form-control:active,
-  .form-control:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: #000;
-  }
-
-  .col-form-label {
-    color: #000;
-    font-size: 13px;
-  }
-
-  .btn,
-  .form-control,
-  .custom-select {
-    height: 45px;
-    border-radius: 0;
-  }
-
-  .custom-select {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 0;
-  }
-
-  .custom-select:active,
-  .custom-select:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: #000;
-  }
-
-  .btn {
-    border: none;
-    border-radius: 0;
-    font-size: 11px;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    border-radius: 30px !important;
-  }
-
-  .btn.btn-primary {
-    border-radius: 30px;
-    background: #4d80e4;
-    color: #fff;
-    -webkit-box-shadow: 0 15px 30px 0 rgba(77, 128, 228, 0.2);
-    box-shadow: 0 15px 30px 0 rgba(77, 128, 228, 0.2);
-  }
-
-  /* .btn:hover {
-    color: #fff; } */
-  .btn:active,
-  .btn:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .contact-wrap {
-    -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
-    background: #fff;
-  }
-
-  .contact-wrap .col-form-label {
-    font-size: 14px;
-    color: #b3b3b3;
-    margin: 0 0 10px 0;
-    display: inline-block;
-    padding: 0;
-  }
-
-  .contact-wrap .form,
-  .contact-wrap .contact-info {
-    padding: 40px;
-  }
-
-  .contact-wrap .contact-info {
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  .contact-wrap .contact-info ul li {
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  .contact-wrap .contact-info ul li .wrap-icon {
-    font-size: 20px;
-    color: #fff;
-    margin-top: 5px;
-  }
-
-  .contact-wrap .form {
-    background: #fff;
-  }
-
-  .contact-wrap .form h3 {
-    color: #000;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-  }
-
-  .contact-wrap .contact-info {
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  .contact-wrap .contact-info a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  @media (max-width: 1199.98px) {
-    .contact-wrap .contact-info {
-      height: 400px !important;
-    }
-  }
-
-  .contact-wrap .contact-info h3 {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
-  label.error {
-    font-size: 12px;
-    color: red;
-  }
-
-  #message {
-    resize: vertical;
-  }
-
-  #form-message-warning,
-  #form-message-success {
-    display: none;
-  }
-
-  #form-message-warning {
-    color: #B90B0B;
-  }
-
-  #form-message-success {
-    color: #55A44E;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .submitting {
-    float: left;
-    width: 100%;
-    padding: 10px 0;
-    display: none;
-    font-weight: bold;
-    font-size: 12px;
-    color: #000;
-  }
-</style>
-
 </html>
